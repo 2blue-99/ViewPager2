@@ -20,16 +20,10 @@ class ViewPageAdapter() : RecyclerView.Adapter<ViewPageAdapter.PagerViewHolder>(
         val binding = MyitemBinding.inflate(LayoutInflater.from(parent.context), parent,false)
         return PagerViewHolder(binding)
     }
-
-
     override fun getItemCount(): Int = Int.MAX_VALUE
 
     override fun onBindViewHolder(holder: PagerViewHolder, position: Int) {
-        holder.bind(heyinList[position%4])
+        holder.bind(heyinList[position%heyinList.size])
+
     }
-
-
-
-
-
 }
